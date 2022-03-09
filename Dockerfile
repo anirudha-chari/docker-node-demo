@@ -1,6 +1,6 @@
-FROM NODE:12-alpine
+FROM node:12-alpine
 WORKDIR /app
-COPY package*.json .
+COPY package*.json ./
 RUN npm install
 COPY . .
 ENV PORT=8080
