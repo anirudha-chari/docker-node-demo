@@ -1,7 +1,8 @@
 const app = require('express')();
 
 app.get('/', (req, res ) => 
-    res.json({ message: 'This is running on Docker 🐳' }) 
+    res.sendFile(__dirname+'/index.html')
+    // res.json({ message: 'This is running on Docker 🐳' }) 
 );
 
 const port = process.env.PORT || 8080;
